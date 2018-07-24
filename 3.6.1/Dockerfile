@@ -114,7 +114,9 @@ RUN set -ex \
 	&& pip install psycopg2 \
 	
     # Django
-    && pip install Django \
+    && pip install django==1.11 \
+    && pip install django-extensions \
+    && pip install python-ldap==3.0.0 \
  
 	# ssh
 	&& apt-get update \
