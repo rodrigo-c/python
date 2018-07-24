@@ -115,9 +115,7 @@ RUN set -ex \
 	
     # Django
     && pip install django==1.11 \
-    && pip install django-extensions \
-    && pip install python-ldap==3.0.0 \
- 
+    
 	# ssh
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends openssh-server \
