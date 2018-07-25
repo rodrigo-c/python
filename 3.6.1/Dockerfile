@@ -146,7 +146,7 @@ COPY sshd_config /etc/ssh/
 
 RUN set -ex \
 	&& ln -s /usr/local/bin/python3.6 /usr/bin/python3 \
-	&& ln -s /usr/bin/python3 /usr/bin/python \
+	##&& ln -s /usr/bin/python3 /usr/bin/python \
 	##
 	&& rm -rf $DOCKER_BUILD_HOME/* \
         && rm -rf /usr/src/request/* \
