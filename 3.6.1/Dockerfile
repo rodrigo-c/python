@@ -122,9 +122,8 @@ RUN set -ex \
 	&& echo "$SSH_PASSWD" | chpasswd \
 
 	# mine
-	&& apt-get install -y git \
-	&& apt-get install -y nano \
-	&& apt-get install -y libsasl2-dev python-dev libldap2-dev libssl-dev \
+	&& apt-get update \
+	&& apt-get install -y --no-install-recommends libsasl2-dev python-dev libldap2-dev libssl-dev \
 	&& pip install python-ldap==3.0.0 \
 	
 	# clean up
