@@ -121,6 +121,12 @@ RUN set -ex \
 	&& apt-get install -y --no-install-recommends openssh-server \
 	&& echo "$SSH_PASSWD" | chpasswd \
 
+	# mine
+	&& apt-get install -y git \
+	&& apt-get -y nano \
+	&& apt-get -y install libsasl2-dev python-dev libldap2-dev libssl-dev \
+	&& pip install python-ldap==3.0.0 \
+
 	# clean up
 	&& apt-get purge -y -V -o APT::AutoRemove::RecommendsImportant=false --auto-remove $tools $buildTimeDeps \
 	&& apt-get autoremove -y
