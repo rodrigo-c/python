@@ -24,7 +24,6 @@ server {
 	}
 
 	location /static {
-		/srv/www/static
 	}
 
         location / {
